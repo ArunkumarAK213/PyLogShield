@@ -1,0 +1,2 @@
+[2026-09-21 12:25:38] BLOCKED IP: 10.0.0.12 | REASON: Matched SQL Injection (SQLi)
+[2026-09-21 12:25:38] BLOCKED IP: 192.168.1.105 | REASON: HTTP Brute Force (3 failed logins)

@@ -1,0 +1,118 @@
+{
+    "metadata": {
+        "system": "PyLogShield Enterprise HIPS v3.0",
+        "timestamp": "2026-09-21 12:49:33",
+        "total_logs_analyzed": 7,
+        "signature_threats_detected": 7,
+        "volumetric_anomalies_detected": 1,
+        "total_active_containments": 0
+    },
+    "signature_telemetry": [
+        {
+            "timestamp": "21/Sep/2026:10:05:22 +0000",
+            "ip": "10.0.0.12",
+            "severity": "CRITICAL",
+            "threat_type": "SQL Injection (SQLi)",
+            "mitre_id": "T1190",
+            "entropy": 4.61,
+            "reputation": {
+                "score": 0,
+                "verdict": "Internal Network",
+                "country": "Private LAN"
+            },
+            "request": "GET /products.php?id=1%27%20OR%201=1-- HTTP/1.1"
+        },
+        {
+            "timestamp": "21/Sep/2026:10:05:22 +0000",
+            "ip": "10.0.0.12",
+            "severity": "HIGH",
+            "threat_type": "Cross-Site Scripting (XSS)",
+            "mitre_id": "T1059.007",
+            "entropy": 4.61,
+            "reputation": {
+                "score": 0,
+                "verdict": "Internal Network",
+                "country": "Private LAN"
+            },
+            "request": "GET /products.php?id=1%27%20OR%201=1-- HTTP/1.1"
+        },
+        {
+            "timestamp": "21/Sep/2026:10:05:22 +0000",
+            "ip": "10.0.0.12",
+            "severity": "HIGH",
+            "threat_type": "Directory Traversal",
+            "mitre_id": "T1083",
+            "entropy": 4.61,
+            "reputation": {
+                "score": 0,
+                "verdict": "Internal Network",
+                "country": "Private LAN"
+            },
+            "request": "GET /products.php?id=1%27%20OR%201=1-- HTTP/1.1"
+        },
+        {
+            "timestamp": "21/Sep/2026:10:08:45 +0000",
+            "ip": "10.0.0.15",
+            "severity": "CRITICAL",
+            "threat_type": "SQL Injection (SQLi)",
+            "mitre_id": "T1190",
+            "entropy": 4.54,
+            "reputation": {
+                "score": 0,
+                "verdict": "Internal Network",
+                "country": "Private LAN"
+            },
+            "request": "GET /search.php?q=<script>alert(1)</script> HTTP/1.1"
+        },
+        {
+            "timestamp": "21/Sep/2026:10:08:45 +0000",
+            "ip": "10.0.0.15",
+            "severity": "HIGH",
+            "threat_type": "Cross-Site Scripting (XSS)",
+            "mitre_id": "T1059.007",
+            "entropy": 4.54,
+            "reputation": {
+                "score": 0,
+                "verdict": "Internal Network",
+                "country": "Private LAN"
+            },
+            "request": "GET /search.php?q=<script>alert(1)</script> HTTP/1.1"
+        },
+        {
+            "timestamp": "21/Sep/2026:10:08:45 +0000",
+            "ip": "10.0.0.15",
+            "severity": "HIGH",
+            "threat_type": "Directory Traversal",
+            "mitre_id": "T1083",
+            "entropy": 4.54,
+            "reputation": {
+                "score": 0,
+                "verdict": "Internal Network",
+                "country": "Private LAN"
+            },
+            "request": "GET /search.php?q=<script>alert(1)</script> HTTP/1.1"
+        },
+        {
+            "timestamp": "21/Sep/2026:10:12:01 +0000",
+            "ip": "8.8.8.8",
+            "severity": "HIGH",
+            "threat_type": "Directory Traversal",
+            "mitre_id": "T1083",
+            "entropy": 4.01,
+            "reputation": {
+                "score": 0,
+                "verdict": "Unchecked (No API Key)",
+                "country": "Unknown"
+            },
+            "request": "GET /admin/../../etc/passwd HTTP/1.1"
+        }
+    ],
+    "volumetric_anomalies": [
+        {
+            "ip": "192.168.1.105",
+            "failed_count": 3,
+            "z_score": 0.0,
+            "mitre_id": "T1110.001"
+        }
+    ]
+}
